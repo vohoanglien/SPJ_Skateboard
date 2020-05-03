@@ -1,0 +1,40 @@
+@model LB.Models.ProductModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Detail</h1>
+<div>
+    <h4>ProductModel</h4>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6">
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ProductName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ProductPrice)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ProductPrice)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ProductDescriptions)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ProductDescriptions)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-4">
+            <img src="~/images/@Model.ProductImage" style="width:100px; height:100px;" alt="image" />
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
